@@ -1,5 +1,5 @@
 # homework
-Python爬豆瓣电影Top250，Springboot+Vue展示
+Python BeautifulSoup  爬豆瓣电影Top250，Springboot+Vue展示
 
 Vue是前端
 
