@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: song
+    password: song1998
+    url: jdbc:mysql://8.131.54.33:3306/movies?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true
+  redis:
+    port: 6379
+    database: 0
+    host: 127.0.0.1
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000ms
+
+mybatis-plus:
+  configuration:
+    # 是否将sql打印到控制面板(该配置会将sql语句和查询的结果都打印到控制台)
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+server:
+  port: 9999
+  tomcat:
+    threads:
+      max: 200
+  max-http-header-size: 8192
